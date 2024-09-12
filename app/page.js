@@ -3,8 +3,8 @@
 import React, { useState } from "react";
 import { Container, TextField, Button, Typography, Box, Alert, Tabs, Tab } from "@mui/material";
 import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "@/firebase"; // Adjust the path as needed
-import { useRouter } from 'next/navigation'; // Use next/navigation for routing
+import { auth } from "@/firebase"; // Ensure this path is correct
+import { useRouter } from 'next/navigation'; // Correct import for Next.js routing
 
 export default function AuthPage() {
   const [tab, setTab] = useState(0); // 0 for login, 1 for register
@@ -50,7 +50,7 @@ export default function AuthPage() {
         bgcolor="white"
       >
         <Typography variant="h4" gutterBottom>
-          {tab === 0 ? "Finance Flow" : "Register"}
+          {tab === 0 ? "Login" : "Register"}
         </Typography>
         <Tabs
           value={tab}
